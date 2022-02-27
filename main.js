@@ -161,3 +161,184 @@ const inventory = [
     sold: 8,
   },
 ];
+
+
+
+// Opdracht 1 - Array Methoden
+
+// Opdracht 1a
+
+const tvTypes = inventory.filter(() => {
+  return inventory.type;
+});
+
+
+console.log(tvTypes)
+
+
+// Opdracht 1b
+
+// const soldOutType = inventory.map((inventory) => {
+//   if (inventory.originalStock === inventory.sold) {
+//     console.log(inventory);
+//   }
+// });
+
+
+// Opdracht 1c
+
+const tvsWithLight = inventory.map((inventory) => {
+  if (inventory.ambiLight === true) {
+  console.log(inventory)
+}
+});
+
+
+
+
+
+
+
+
+// Opdracht 2 - Elementen in de DOM plaatsen
+
+// Opdracht 2a
+
+let soldTvs = 0;
+
+for (let i = 0; i < inventory.length; i++) {
+  soldTvs = inventory[i].sold + soldTvs;
+}
+
+console.log(soldTvs + " Verkochte televisies")
+
+
+
+// Opdracht 2b
+// Zie DOM.js bestand
+
+// Hoe ik deze op de pagina weergeef, hierop loop ik vast.
+// Ik probeerde al binnen het textcontent deel van de DOM, of in de getElementsById, de uitkomst van bovenstaande code te krijgen maar dan crasht ie.
+// Ik krijg alleen voor 1 specifiek indexnumber uit de inventory lijst de uitkomst.
+
+
+
+// Opdracht 2c
+
+let originalStockTvs = 0;
+
+for (let i = 0; i < inventory.length; i++) {
+  originalStockTvs = inventory[i].originalStock + originalStockTvs;
+}
+
+console.log(originalStockTvs + " TV's Original Stock")
+
+
+
+// Opdracht 2d
+// Zie DOM.js bestand
+
+// Hoe ik deze op de pagina weergeef, hierop loop ik vast.
+// Ik probeerde al binnen het textcontent deel van de DOM, of in de getElementsById, de uitkomst van bovenstaande code te krijgen maar dan crasht ie.
+// Ik krijg alleen voor 1 specifiek indexnumber uit de inventory lijst de uitkomst.
+
+
+
+// Opdracht 2e
+const availableTvs = originalStockTvs - soldTvs;
+
+console.log(availableTvs + " tv's moeten nog verkocht worden.")
+
+
+
+
+
+
+
+
+// Opdracht 3 Array Methodes en Functies
+//
+// Opdracht 3a
+let showAllTvBrands = 0;
+
+for (let i = 0; i < inventory.length; i++) {
+  showAllTvBrands = inventory[i].brand + showAllTvBrands;
+}
+
+console.log("All TV Brands: " + showAllTvBrands)
+
+// Hoe ik deze op de pagina weergeef, hierop loop ik vast.
+// Ik probeerde al binnen het textcontent deel van de DOM, of in de getElementsById, de uitkomst van bovenstaande code te krijgen maar dan crasht ie.
+
+
+
+// Opdracht 3b
+
+
+
+
+
+
+// Opdracht 4 Functies
+//
+// Opdracht 4a
+
+let television = inventory[1].brand + " - " + inventory[1].type + " - " + inventory[1].name;
+
+console.log(television)
+
+
+// Opdracht 4b
+
+function televisionDetails(price) {
+  return "€" + price;
+}
+
+const tvPrice = televisionDetails(379)
+
+console.log(tvPrice)
+
+
+// Opdracht 4c
+
+let tvSizes = inventory[1].availableSizes;
+let tvSizesInCm = inventory[1].availableSizes * 2.54;
+
+let outcome = tvSizes + " inches " + "(" + tvSizesInCm + ")" + " cm.";
+
+console.log(outcome)
+
+//
+// // function screenSizes() {
+// //   // tvSizesInCm = inventory.availableSizes * 2.54
+// //   // tvSizes = inventory[1].availableSizes + tvSizesInCm
+// //   return tvSizes + tvSizesInCm;
+// // }
+//
+// console.log(tvSizes + tvSizesInCm);
+
+
+//
+// function screenSizes() {
+//   console.log(inventory[1].availableSizes);
+//   console.log(inventory[1].availableSizes * 2.54);
+// }
+//
+// screenSizes();
+
+
+function screenSizes2(number){
+  console.log(inventory[number].availableSizes + " inches " + "(" + inventory[number].availableSizes * 2.54 + ")" + " cm.")
+}
+
+screenSizes2(1)
+
+
+
+let moreThanOne = inventory.map((inventory) => {
+  return inventory.availableSizes;
+})
+
+console.log(moreThanOne[1])
+
+
