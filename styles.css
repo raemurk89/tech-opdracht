@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial;
+    background-color: bisque;
+    margin: 20px;
+}
+
+#to-be-sold {
+    margin-bottom: 60px;
+}
+
+#sold-televisions {
+    color: green;
+}
+
+#original-stock-tvs {
+    color: blue;
+}
+
+#to-be-sold {
+    color: red;
+}
